@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-
+import './components/Boton/boton';
 export class AppScaffolding extends LitElement {
   static get properties() {
     return {
@@ -21,6 +21,7 @@ export class AppScaffolding extends LitElement {
     return html`
       <h1>${this.title}</h1>
       <p>Hola mundo</p>
+      <wc-boton></wc-boton>
     `;
   }
 }
