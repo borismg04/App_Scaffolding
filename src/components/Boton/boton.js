@@ -15,9 +15,20 @@ export class boton extends LitElement {
     return [style];
   }
 
+  firstUpdated(){
+    this.boton = this.shadowRoot.querySelector('button');
+  }
+
+  mouseDownListener(event){
+    this.boton.style.backgroundColor = '0 0 0 1px #3f3f3f';
+  };
+  mouseUpListener(event){
+    this.boton.style.backgroundColor = '0 0 0 1px #6dff75';
+  };
+
   render() {
     return html`
-      <button>${this.texto}</button>
+      <button @mousedown=${this.mouseDownListener} @mouseup=${this.mouseUpListener}>BOTON</button>
     `;
   }
 }

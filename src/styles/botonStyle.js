@@ -12,7 +12,6 @@ export default css`
     margin: 0 auto;
     margin-top: 1rem;
   }
-
   button:hover {
     background: #6dff75;
     box-shadow: 0 0 0 1px #6dff75;
