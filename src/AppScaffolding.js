@@ -21,7 +21,7 @@ export class AppScaffolding extends LitElement {
     return html`
       <h1>${this.title}</h1>
       <p>Hola mundo</p>
-      <wc-boton></wc-boton>
+      <wc-boton texto="Boton"></wc-boton>
     `;
   }
 }
