@@ -9,7 +9,6 @@ export class boton extends LitElement {
   }
   constructor(){
     super();
-    // this.texto = 'Boton';
   }
 
   static get styles() {
