@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import './components/Boton/boton';
+import './views/home/home';
 export class AppScaffolding extends LitElement {
   static get properties() {
     return {
@@ -14,14 +15,14 @@ export class AppScaffolding extends LitElement {
 
   constructor() {
     super();
-    this.title = 'My app';
+    this.title = 'My App Scaffold';
   }
 
   render() {
     return html`
       <h1>${this.title}</h1>
-      <p>Hola mundo</p>
-      <wc-boton texto="Boton"></wc-boton>
+      <wc-home></wc-home>
+      <!-- <wc-boton texto="Boton"></wc-boton> -->
     `;
   }
 }
