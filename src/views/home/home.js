@@ -1,8 +1,13 @@
 import {LitElement,html} from 'lit-element';
 import './tabla';
 import './registro';
-
 export class Home extends LitElement {
+  static get properties(){
+    return {
+      lista: {type: Array}
+    };
+  };
+
   constructor(){
     super();
     this.lista = [
@@ -12,11 +17,17 @@ export class Home extends LitElement {
     ];
   }
 
+  agregarAlista(event){
+    let newLista = Object.assign([],this.lista);
+    newLista.push(event.detail);
+    this.lista = newLista;
+  }
+
   render() {
     return html`
     <div>
       <h1>Home</h1>
-      <wc-registro></wc-registro>
+      <wc-registro @guardarPersona="${this.agregarAlista}"></wc-registro>
       <wc-tabla .lista="${this.lista}"></wc-tabla>
     </div>
     `;
