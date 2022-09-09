@@ -1,6 +1,13 @@
 import {LitElement,html} from 'lit-element';
 
 export class Tabla extends LitElement {
+
+  static get properties(){
+    return {
+      lista: {type: Array}
+    };
+  }
+
   render(){
     return html`
     <div>
@@ -13,6 +20,19 @@ export class Tabla extends LitElement {
             <th>Edad</th>
           </tr>
         </thead>
+        <tbody>
+          ${
+            this.lista.map((item)=>{
+              return html`
+              <tr>
+                <td>${item.nombre}</td>
+                <td>${item.apellido}</td>
+                <td>${item.edad}</td>
+              </tr>
+              `;
+            }
+          )}
+        </tbody>
       </table>
     </div>
     `;
