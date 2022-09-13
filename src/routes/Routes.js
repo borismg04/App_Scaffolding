@@ -17,10 +17,10 @@ const routes = [
   },
 ]
 
-const outlet = document.getElementById('outlet')
+// const outlet = document.getElementById('outlet')
 
-const router = new Router(outlet);
+// const router = new Router(outlet);
 
-router.setRoutes(routes);
+// router.setRoutes(routes);
 
-export default router;
+// export default router;
