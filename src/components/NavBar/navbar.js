@@ -17,25 +17,28 @@ export class NavBar extends LitElement {
     super();
     this.link = [
       {
-        texto: 'Home',
-        ruta: '/',
-      },
-      {
-        texto: 'Pagina 2',
-        ruta: '/pagina2',
-      },
-      {
-        texto: 'Pagina 3',
-        ruta: '/pagina3',
-      },
-
+        id:"",
+        path:"",
+        component:"",
+        action:"",
+      }
     ];
+  }
+
+  transformar(link){
+  return link.map((item) =>{
+    return {
+      texto: item.id,
+      ruta: item.path,
+    }
+    })
   };
+
 
   render(){
     return html`
     <div class="contendor-navbar">
-    ${this.link.map((item) => html`
+    ${this.transformar(this.link).map((item) => html`
       <wc-boton .Objeto="${item}"></wc-boton>
     `)}
     </div>

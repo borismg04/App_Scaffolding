@@ -9,6 +9,7 @@ import './views/Pagina3/pagina3';
 
 const routes = [
   {
+    id: 'home',
     path: '/',
     component: 'wc-home',
     action: async () => {
@@ -16,6 +17,7 @@ const routes = [
     }
   },
   {
+    id: 'pagina2',
     path: '/pagina2',
     component: 'wc-pagina2',
     action: async () => {
@@ -23,10 +25,19 @@ const routes = [
     }
   },
   {
+    id: 'pagina3',
     path: '/pagina3',
     component: 'wc-pagina3',
     action: async () => {
       await import('./views/Pagina3/pagina3.js')
+    }
+  },
+  {
+    id: 'pagina4',
+    path: '/pagina4',
+    component: 'wc-pagina4',
+    action: async () => {
+      await import('./views/Pagina4/pagina4.js')
     }
   }
 ]
@@ -54,7 +65,7 @@ export class AppScaffolding extends LitElement {
 
     return html`
       <h1>${this.title}</h1>
-      <wc-navbar></wc-navbar>
+      <wc-navbar .link="${routes}"></wc-navbar>
       <slot></slot>
       <!-- <wc-home></wc-home> -->
       <!-- <wc-boton texto="Boton"></wc-boton> -->

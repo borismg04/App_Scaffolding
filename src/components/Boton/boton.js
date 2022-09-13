@@ -13,7 +13,6 @@ export class boton extends LitElement {
       texto: 'Boton',
       ruta: '/',
     };
-
   }
 
   static get styles() {
