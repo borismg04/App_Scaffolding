@@ -7,12 +7,37 @@ export class NavBar extends LitElement {
     return [style];
   }
 
+  static get properties(){
+    return {
+      link: {type: Array, attribute:true},
+    };
+  };
+
+  constructor(){
+    super();
+    this.link = [
+      {
+        texto: 'Home',
+        ruta: '/',
+      },
+      {
+        texto: 'Pagina 2',
+        ruta: '/pagina2',
+      },
+      {
+        texto: 'Pagina 3',
+        ruta: '/pagina3',
+      },
+
+    ];
+  };
+
   render(){
     return html`
     <div class="contendor-navbar">
-      <wc-boton texto="Pagina 1"></wc-boton>
-      <wc-boton texto="Pagina 2"></wc-boton>
-      <wc-boton texto="Pagina 3"></wc-boton>
+    ${this.link.map((item) => html`
+      <wc-boton .Objeto="${item}"></wc-boton>
+    `)}
     </div>
     `;
   }
