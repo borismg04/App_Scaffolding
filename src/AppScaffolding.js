@@ -1,6 +1,8 @@
 import { LitElement, html, css } from 'lit';
 import './components/Boton/boton';
 import './views/home/home';
+import router from './routes/Routes';
+
 export class AppScaffolding extends LitElement {
   static get properties() {
     return {
@@ -17,6 +19,8 @@ export class AppScaffolding extends LitElement {
     super();
     this.title = 'My App Scaffold';
   }
+
+
 
   render() {
     return html`
