@@ -4,11 +4,15 @@ import style from '../../styles/botonStyle';
 export class boton extends LitElement {
   static get properties() {
     return {
-      texto: {type: String , attribute:true},
+      Objeto: {type: Object , attribute:true},
     };
   }
   constructor(){
     super();
+    this.Objeto = {
+      texto: 'Boton',
+      ruta: '/',
+    };
   }
 
   static get styles() {
@@ -28,7 +32,9 @@ export class boton extends LitElement {
 
   render() {
     return html`
-      <button @mousedown=${this.mouseDownListener} @mouseup=${this.mouseUpListener}>BOTON</button>
+    <a href="${this.Objeto.ruta}">
+      <button @mousedown="${this.mouseDownListener}" @mouseup="${this.mouseUpListener}">${this.Objeto.texto}</button>
+    </a>
     `;
   }
 }
