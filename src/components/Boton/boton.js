@@ -28,7 +28,7 @@ export class boton extends LitElement {
 
   render() {
     return html`
-      <button @mousedown=${this.mouseDownListener} @mouseup=${this.mouseUpListener}>BOTON</button>
+      <button @mousedown="${this.mouseDownListener}" @mouseup="${this.mouseUpListener}">${this.texto}</button>
     `;
   }
 }

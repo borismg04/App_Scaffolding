@@ -3,14 +3,13 @@ import {css} from 'lit-element';
 export default css`
   button {
     text-align: center;
-    width: 20%;
     height: 2.5rem;
     background: #6af371;
     border: none;
     padding: 0.5rem;
     border-radius: 5px;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 1px;
   }
   button:hover {
     background: #6dff75;
